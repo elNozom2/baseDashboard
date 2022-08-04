@@ -1,0 +1,21 @@
+<template>
+  <v-container>
+    <edit-add :d="d"></edit-add>
+  </v-container>
+</template>
+<script>
+import EditAdd from "@/utils/crud/editAdd";
+import details from "@/cruds/itemsHalf";
+import EditAddComponent from "@/utils/crud/editAdd.vue";
+export default {
+  components: {
+    "edit-add": EditAddComponent,
+  },
+  computed: {
+    d() {
+      const d = new EditAdd(details);
+      return d;
+    },
+  },
+};
+</script>

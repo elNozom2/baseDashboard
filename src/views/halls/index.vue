@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import data from "@/datatables/items/index";
+import data from "@/datatables/halls/index";
 import datatable from "@/utils/datatable/components/datatable.vue";
 export default {
   name: "halls",

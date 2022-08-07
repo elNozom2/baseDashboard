@@ -5,28 +5,51 @@ export default [
     children: [
       {
         icon: "mdi-home-edit-outline",
-        title: "sidebar.groups",
-        to: `items-groups-create`,
+        title: "sidebar.items.index",
+        to: `items`,
       },
       {
         icon: "mdi-home-edit-outline",
-        title: "itemsForm",
-        to: `itemsForm`,
+        title: "sidebar.items.create",
+        to: `items-create`,
+      },
+    ],
+  },
+  {
+    icon: "mdi-home-edit-outline",
+    title: "sidebar.categories",
+    children: [
+      {
+        icon: "mdi-home-edit-outline",
+        title: "sidebar.categories.index",
+        to: `categories-create`,
+      },
+    ],
+  },
+  {
+    icon: "mdi-home-edit-outline",
+    title: "sidebar.halls",
+    children: [
+      {
+        icon: "mdi-home-edit-outline",
+        title: "sidebar.halls.index",
+        to: `halls`,
       },
       {
         icon: "mdi-home-edit-outline",
-        title: "itemsFormHalf",
-        to: `itemsFormHalf`,
+        title: "sidebar.halls.create",
+        to: `halls-create`,
       },
+    ],
+  },
+  {
+    icon: "mdi-home-edit-outline",
+    title: "sidebar.globals",
+    children: [
       {
         icon: "mdi-home-edit-outline",
-        title: "groupTable",
-        to: `group-tables-insert`,
-      },
-      {
-        icon: "mdi-home-edit-outline",
-        title: "groupTable",
-        to: `group-tables`,
+        title: "sidebar.globals.settings",
+        to: `globals-settings`,
       },
     ],
   },

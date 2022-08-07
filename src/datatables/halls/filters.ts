@@ -1,8 +1,12 @@
 import Form from "@/utils/form/Form";
 import { FormInterface } from "@/utils/form/interface";
-import { usernameInput } from "./../../utils/form/inputs/InputStore";
+import { Name, DateFrom, DateTo } from "../globalFilters";
 import Input from "@/utils/form/inputs/Input";
-const inputs: Input[] = [new Input(usernameInput)];
+const inputs: Input[] = [
+  new Input(Name),
+  new Input(DateFrom),
+  new Input(DateTo),
+];
 const params: FormInterface = {
   inputs,
 };

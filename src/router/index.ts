@@ -16,43 +16,48 @@ const routes: Array<RouteConfig> = [
         name: "Home",
         component: Home,
       },
+      // {
+      //   path: "/items",
+      //   name: "items-list",
+      //   component: () => import("@/views/items/index.vue"),
+      // },
       {
-        path: "/items",
-        name: "items-list",
+        path: "/items/",
+        name: "items",
         component: () => import("@/views/items/index.vue"),
       },
       {
         path: "/items/create",
         name: "items-create",
-        component: () => import("@/views/items/create.vue"),
+        component: () => import("@/views/items/editAdd.vue"),
       },
       {
         path: "/items/edit/:id",
         name: "items-edit",
-        component: () => import("@/views/items/edit.vue"),
+        component: () => import("@/views/items/editAdd.vue"),
       },
-      {
-        path: "/items/view/:id",
-        name: "items-view",
-        component: () => import("@/views/items/view.vue"),
-      },
-      {
-        path: "/items/groups",
-        name: "items-groups",
-        component: () => import("@/views/items/group-base.vue"),
-        children: [
-          {
-            path: "/items/groups",
-            name: "items-groups-create",
-            component: () => import("@/views/items/group-edit-add.vue"),
-          },
-          {
-            path: "/items/groups/:id",
-            name: "items-groups-edit",
-            component: () => import("@/views/items/group-edit-add.vue"),
-          },
-        ],
-      },
+      // {
+      //   path: "/items/view/:id",
+      //   name: "items-view",
+      //   component: () => import("@/views/items/view.vue"),
+      // },
+      // {
+      //   path: "/items/groups",
+      //   name: "items-groups",
+      //   component: () => import("@/views/items/group-base.vue"),
+      //   children: [
+      //     {
+      //       path: "/items/groups",
+      //       name: "items-groups-create",
+      //       component: () => import("@/views/items/group-edit-add.vue"),
+      //     },
+      //     {
+      //       path: "/items/groups/:id",
+      //       name: "items-groups-edit",
+      //       component: () => import("@/views/items/group-edit-add.vue"),
+      //     },
+      //   ],
+      // },
       {
         path: "/itemsForm",
         name: "itemsForm",
@@ -77,6 +82,43 @@ const routes: Array<RouteConfig> = [
         path: "/groupTable/:id",
         name: "group-tables-edit",
         component: () => import("@/views/items/groupTableEditAdd.vue"),
+      },
+      {
+        path: "/categories/",
+        name: "categories-index",
+        component: () => import("@/views/categories/index.vue"),
+        children: [
+          {
+            path: "/categories/",
+            name: "categories-create",
+            component: () => import("@/views/items/group-edit-add.vue"),
+          },
+          {
+            path: "categories/edit/:id",
+            name: "categories-edit",
+            component: () => import("@/views/items/group-edit-add.vue"),
+          },
+        ],
+      },
+      {
+        path: "/halls/",
+        name: "halls",
+        component: () => import("@/views/halls/index.vue"),
+      },
+      {
+        path: "/halls/create",
+        name: "halls-create",
+        component: () => import("@/views/halls/editAdd.vue"),
+      },
+      {
+        path: "/halls/edit/:id",
+        name: "halls-edit",
+        component: () => import("@/views/halls/editAdd.vue"),
+      },
+      {
+        path: "/globals/settings",
+        name: "globals-settings",
+        component: () => import("@/views/globals/settings.vue"),
       },
     ],
   },
